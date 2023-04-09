@@ -419,8 +419,12 @@ export const useChatStore = create<ChatStore>()(
             }
           },
           onError(error, statusCode) {
-            if (statusCode === 401) {
+            if (statusCode === 400) {
+              botMessage.content = Locale.Error.HaveNoToken;
+            } else if (statusCode === 401) {
               botMessage.content = Locale.Error.Unauthorized;
+            } else if (statusCode === 403) {
+              botMessage.content = Locale.Error.OverQuota;
             } else {
               botMessage.content += "\n\n" + Locale.Store.Error;
             }

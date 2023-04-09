@@ -3,7 +3,9 @@ import { SubmitKey } from "../store/app";
 const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
+    HaveNoToken: "现在是未授权状态，请在URL中加上Token参数。",
     Unauthorized: "现在是未授权状态，请点击左下角设置按钮输入访问密码。",
+    OverQuota: "请求额度已用完，请联系管理充值额度。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,

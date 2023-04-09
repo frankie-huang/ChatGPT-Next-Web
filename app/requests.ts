@@ -1,6 +1,8 @@
 import type { ChatRequest, ChatReponse } from "./api/openai/typing";
 import { Message, ModelConfig, useAccessStore, useChatStore } from "./store";
 import { showToast } from "./components/ui-lib";
+import { getQueryVariable } from "./utils";
+import { deductQuota } from "./api/common";
 
 const TIME_OUT_MS = 30000;
 
@@ -121,6 +123,36 @@ export async function requestUsage() {
 }
 
 export async function requestChatStream(
+  messages: Message[],
+  options?: {
+    filterBot?: boolean;
+    modelConfig?: ModelConfig;
+    onMessage: (message: string, done: boolean) => void;
+    onError: (error: Error, statusCode?: number) => void;
+    onController?: (controller: AbortController) => void;
+  },
+) {
+  // Check Page Token
+  const token = getQueryVariable("token");
+  console.log("[Token] ", token);
+  if (token == false || token.length == 0) {
+    console.error("Request Token");
+    options?.onError(new Error("Have no Token"), 400);
+    return;
+  }
+  const quotaResult = await deductQuota(token);
+  quotaResult.json().then(async (data) => {
+    console.log("frankie", data.code);
+    if (data.code == 0 && data.balance >= 0) {
+      await doRequestChatStream(messages, options);
+    } else {
+      console.error("OverQuota");
+      options?.onError(new Error("Over Quota"), 403);
+    }
+  });
+}
+
+export async function doRequestChatStream(
   messages: Message[],
   options?: {
     filterBot?: boolean;

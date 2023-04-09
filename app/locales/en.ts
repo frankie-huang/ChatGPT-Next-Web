@@ -4,8 +4,12 @@ import type { LocaleType } from "./index";
 const en: LocaleType = {
   WIP: "WIP...",
   Error: {
+    HaveNoToken:
+      "It is now in an unauthorized state, please add Token parameters to the URL.",
     Unauthorized:
       "Unauthorized access, please enter access code in settings page.",
+    OverQuota:
+      "Request quota has been used up, please contact management recharge quota.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,

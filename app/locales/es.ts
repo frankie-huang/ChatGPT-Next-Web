@@ -4,8 +4,12 @@ import type { LocaleType } from "./index";
 const es: LocaleType = {
   WIP: "En construcción...",
   Error: {
+    HaveNoToken:
+      "Ahora se encuentra en un estado no autorizado, agregue el parámetro Token a la URL.",
     Unauthorized:
       "Acceso no autorizado, por favor ingrese el código de acceso en la página de configuración.",
+    OverQuota:
+      "Se ha agotado el cupo de solicitud, por favor contacte con la gestión de cupo de recarga.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} mensajes`,

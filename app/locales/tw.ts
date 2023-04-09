@@ -4,7 +4,9 @@ import type { LocaleType } from "./index";
 const tw: LocaleType = {
   WIP: "該功能仍在開發中……",
   Error: {
+    HaveNoToken: "現在是未授權狀態，請在URL中加上Token參數。",
     Unauthorized: "目前您的狀態是未授權，請前往設定頁面輸入授權碼。",
+    OverQuota: "請求額度已用完，請聯繫管理充值額度。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 條對話`,
