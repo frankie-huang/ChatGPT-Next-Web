@@ -20,3 +20,13 @@ export async function requestOpenai(req: NextRequest) {
     body: req.body,
   });
 }
+
+export async function deductQuota(token: string) {
+  return fetch(`${PROTOCOL}://myafei.cn/api/deductQuota`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({ token: token }),
+  });
+}
