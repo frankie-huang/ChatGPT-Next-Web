@@ -164,6 +164,13 @@ function _Home() {
     return <Loading />;
   }
 
+  const creatAi = () => {
+    window.open(
+      "https://wx.zsxq.com/dweb2/index/group/48884855454458",
+      "_blank",
+    );
+  };
+
   return (
     <div
       className={`${
@@ -176,10 +183,10 @@ function _Home() {
         className={styles.sidebar + ` ${showSideBar && styles["sidebar-show"]}`}
       >
         <div className={styles["sidebar-header"]}>
-          <div className={styles["sidebar-title"]}>ChatGPT Next</div>
-          <div className={styles["sidebar-sub-title"]}>
-            Build your own AI assistant.
-          </div>
+          <div className={styles["sidebar-title"]}>AI掘金时代</div>
+          <a className={styles["sidebar-sub-title"]} onClick={creatAi}>
+            马上创建你自己的AI助手 &gt;&gt;
+          </a>
           <div className={styles["sidebar-logo"]}>
             <ChatGptIcon />
           </div>
@@ -195,6 +202,9 @@ function _Home() {
           <ChatList />
         </div>
 
+        <div className={styles["ai-write"]} onClick={creatAi}>
+          点我免费领取ChatGPT提示词全集，开始AI个人创作👨‍💻👨‍💻
+        </div>
         <div className={styles["sidebar-tail"]}>
           <div className={styles["sidebar-actions"]}>
             <div className={styles["sidebar-action"] + " " + styles.mobile}>
@@ -213,11 +223,11 @@ function _Home() {
                 shadow
               />
             </div>
-            <div className={styles["sidebar-action"]}>
+            {/* <div className={styles["sidebar-action"]}>
               <a href={REPO_URL} target="_blank">
                 <IconButton icon={<GithubIcon />} shadow />
               </a>
-            </div>
+            </div> */}
           </div>
           <div>
             <IconButton
