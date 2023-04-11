@@ -22,7 +22,7 @@ export async function requestOpenai(req: NextRequest) {
 }
 
 export async function deductQuota(token: string) {
-  return fetch(`${PROTOCOL}://juejin.club/api/deductQuota`, {
+  return fetch(`${PROTOCOL}://myafei.cn/api/deductQuota`, {
     headers: {
       "Content-Type": "application/json",
     },
