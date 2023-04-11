@@ -9,7 +9,7 @@ const it: LocaleType = {
     Unauthorized:
       "Accesso non autorizzato, inserire il codice di accesso nella pagina delle impostazioni.",
     OverQuota:
-      "La quota di richiesta è esaurita, si prega di contattare la direzione quota di ricarica.",
+      "Il numero di conversazioni nel tuo account è esaurito, contatta l'amministratore (vx: aigpt6666) per ricaricare.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messaggi`,

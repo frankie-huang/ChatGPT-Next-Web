@@ -9,7 +9,7 @@ const en: LocaleType = {
     Unauthorized:
       "Unauthorized access, please enter access code in settings page.",
     OverQuota:
-      "Request quota has been used up, please contact management recharge quota.",
+      "The number of conversations in your account has been exhausted, please contact the administrator (vx: aigpt6666) to recharge.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,

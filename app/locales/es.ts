@@ -9,7 +9,7 @@ const es: LocaleType = {
     Unauthorized:
       "Acceso no autorizado, por favor ingrese el código de acceso en la página de configuración.",
     OverQuota:
-      "Se ha agotado el cupo de solicitud, por favor contacte con la gestión de cupo de recarga.",
+      "Se agotó la cantidad de conversaciones en su cuenta, comuníquese con el administrador (vx: aigpt6666) para recargar.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} mensajes`,
