@@ -5,7 +5,7 @@ const en: LocaleType = {
   WIP: "WIP...",
   Error: {
     HaveNoToken:
-      "It is now in an unauthorized state, please add Token parameters to the URL.",
+      "No invitation record, please contact the administrator (wx:aigpt6666) to obtain the authorization code.",
     Unauthorized:
       "Unauthorized access, please enter access code in settings page.",
     OverQuota:

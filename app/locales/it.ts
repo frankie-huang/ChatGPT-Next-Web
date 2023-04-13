@@ -5,7 +5,7 @@ const it: LocaleType = {
   WIP: "Work in progress...",
   Error: {
     HaveNoToken:
-      "Ora è in uno stato non autorizzato, aggiungi i parametri Token all'URL.",
+      "Nessun record di invito, contattare l'amministratore (wx:aigpt6666) per ottenere il codice di autorizzazione.",
     Unauthorized:
       "Accesso non autorizzato, inserire il codice di accesso nella pagina delle impostazioni.",
     OverQuota:
