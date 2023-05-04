@@ -22,7 +22,7 @@ export async function requestOpenai(req: NextRequest) {
 }
 
 export async function deductQuota(token: string) {
-  return fetch(`${PROTOCOL}://myafei.cn/api/deductQuota`, {
+  return fetch(`${PROTOCOL}://myafei.cn/golang/api/v1/deductQuota`, {
     headers: {
       "Content-Type": "application/json",
     },
